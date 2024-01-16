@@ -2,7 +2,7 @@ import streamlit as st
 import google.generativeai as genai
 from PIL import Image
 
-genai.configure(api_key = st.secrets["API_KEY"])
+genai.configure(api_key = "AIzaSyBj8FJ2HS4h7GrSoQS7Lk5OeT6Om-xO8R0")
 
 model = genai.GenerativeModel('gemini-pro-vision')
 def get_gemini_response(input,image):
@@ -35,11 +35,3 @@ if submit or input:
     response=get_gemini_response(input,image)
     st.subheader("The Response is")
     st.write(response)
-
-st.markdown("""
----
-
-*Built with ❤️ by Manisha Varshney*
-
-[![Repo](https://badgen.net/badge/icon/GitHub?icon=github&label)](https://github.com/manisha-v/SQL-LLM)
-""")
